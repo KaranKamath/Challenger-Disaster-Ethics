@@ -1,207 +1,220 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+	<title>EG2401</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/reveal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/theme/black.css" id="theme">
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/reveal.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/theme/black.css" id="theme">
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/css/zenburn.css">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/css/zenburn.css">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-
-		<!--[if lt IE 9]>
+	<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/html5shiv.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+	<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>Tutorial 1 - EG2401</h1>
+				<br>
+				<p>
+					Presentation by Group 1
+				</p>
+			</section>
+
+			<section>
 				<section>
-					<h1>Automatically Generating Pronunciation Dictionaries</h1>
+					<h2>Automatic Speech Recognizers</h2>
+					<img src="images/FYP-1.png"></img>
+				</section>
+				<section>
+					<h2>Challenge</h2>
 					<p>
-						<small>CA Presentation - <a href="http://karankamath.com">Karan Kamath</a></small>
+						<span class="fragment">Training an ASR requires a large amount of transcribed data&hellip;</span>
+						<span class="fragment">which makes it tough for languages where this data is unavailable or expensive</span>
+					</p>
+					<p>
+						<span class="fragment">In the case of Chinese dialects&hellip;</span>
+						<span class="fragment">training Phoneme-2-Phoneme models accounting for (predictable) deviations. (Based on historical links.)</span>
 					</p>
 				</section>
+			</section>
 
+			<!-- Example of nested vertical slides -->
+			<section>
 				<section>
-					<section>
-						<h2>Automatic Speech Recognizers</h2>
-						<img src="images/FYP-1.png"></img>	
-					</section>
-					<section>
-						<h2>Challenge</h2>
-						<p><span class="fragment">Training an ASR requires a large amount of transcribed data&hellip;</span>
-						<span class="fragment">which makes it tough for languages where this data is unavailable or expensive</span></p>
-						<p><span class="fragment">In the case of Chinese dialects&hellip;</span>
-						<span class="fragment">training Phoneme-2-Phoneme models accounting for (predictable) deviations. (Based on historical links.)</span></p>
-					</section>
+					<h2>Existing Approaches</h2>
+					<h3>Literature Review</h3>
 				</section>
-
-				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Existing Approaches</h2>
-						<h3>Literature Review</h3>
-					</section>
-					<section>
-						<ul>
-							<li class="fragment">Quinlan (1986) &ndash; Seminal paper on the ID3 decision tree learning algorithm</li>
-							<li class="fragment">Bisani (2008) &ndash; Paper that introduces G2P algorithm (that was released with the Sequitur tool) used in experiments. It achieved letter error rates of 8.62% and word error rates of 37.27% on the NETtalk 18k (English) datasets, beating earlier results on this dataset</li>
-						</ul>
-					</section>
-					<section>
-						<ul>
-							<li class="fragment">Torkkola (1993) &ndash; Dynamically Expanding Context: Decision Tree approach that showed local context alone is not enough (and additional information about morphological structure and etymology is needed). Reported an accuracy of 91% on a 20,008 word English corpus.</li>
-							<li class="fragment">Daelemans and van den Bosch (1996): Also used decision trees, but specify 2-step G2P alignment algorithm (for English). Based on the notion that similar words have similar spelling.</li>
-						</ul>
-					</section>
-					<section>
-						<ul>
-							<li class="fragment">In Schlippe et al (2013): Web-based tools (Wiktionary and GlobalPhone), were leveraged to automatically create pronounciation dictionaries (using Sequitur, and showed that about 15k phone tokens were sufficient to train stable grapheme-to-phoneme models in 10 languages. Best word error rates of 20.97% were achieved for English.</li>
-							<li class="fragment">In Veiga et al, a pronunciation dictionary for European Portuguese was created using a joint sequence g2p model. For grapheme to phoneme alignment, the 1-01 alignment was used, which allows cases where more than one grapheme originates a phoneme (deletion of phonemes). Training the dictionary on a pronunciation dictionary of 40k words yielded a word error rate of 2.44% and phoneme error rate of 0.32%. </li>
-						</ul>
-					</section>
+					<ul>
+						<li class="fragment">Quinlan (1986) &ndash; Seminal paper on the ID3 decision tree learning algorithm</li>
+						<li class="fragment">Bisani (2008) &ndash; Paper that introduces G2P algorithm (that was released with the Sequitur tool) used in experiments. It achieved letter error rates of 8.62% and word error rates of 37.27% on the NETtalk 18k (English) datasets, beating earlier
+							results on this dataset</li>
+					</ul>
 				</section>
-
 				<section>
-					<section>
-						<h2>Decision Tree Clustering</h2>
-					</section>
-					<section>
-						<h2>Training</h2>
-						<p>Training was done using local context of graphemes as features, and the information gain criterion.</p>
-						<p>The guessed classes were phonemes.</p>
-						<p>The J48 tree (weka implementation of the C4.5 extension of ID3), was used.</p>
-						<img src="images/IGTree.png"></img>
-					</section>
-					<section>
-						<h2>Results &ndash; Vietnamese (English)</h2>
-						<img src="images/WEKAViet.png"></img>
-					</section>
-					<section>
-						<h2>Results &ndash; Vietnamese (English)</h2>
-						<ul>
-							<li>This experiment only used the local context of the graphemes (immediate neighbours, start / end tokens), and performance is likely to improve with morphological features and better alignment.</li>
-							<li>Error rate shown is word error rate.</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Results &ndash; Hindi</h2>
-						<img src="images/WEKAHindi.png"></img>
-					</section>
-					<section>
-						<h2>Results &ndash; Hindi</h2>
-						<ul>
-							<li>Alignment was fairly regular in this case, and some grapheme modifiers which don't contribute to phonemes were encoded as features of the base grapheme.</li>
-							<li>Features included local context and 4 base grapheme modifiers.</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Results &ndash; Hindi</h2>
-						<img src="images/TreeHindi.png"></img>
-					</section>
+					<ul>
+						<li class="fragment">Torkkola (1993) &ndash; Dynamically Expanding Context: Decision Tree approach that showed local context alone is not enough (and additional information about morphological structure and etymology is needed). Reported an accuracy of 91% on a 20,008
+							word English corpus.</li>
+						<li class="fragment">Daelemans and van den Bosch (1996): Also used decision trees, but specify 2-step G2P alignment algorithm (for English). Based on the notion that similar words have similar spelling.</li>
+					</ul>
 				</section>
-
 				<section>
-					<section>
-						<h2>Grapheme-To-Phoneme (G2P)</h2>
-					</section>
-					<section>
-						<h2>Introduction</h2>
-						<p>Key Insight: The fundamental idea is that a relation of input and output sequences can be generated from a common sequence of joint units (called graphones) that carry both input and output symbols. <br/>The process of creating graphones from input and output symbols is called alignment or segmentation</p>
-					</section>
-					<section>
-						<h2>Introduction</h2>
-						<p>After segmentation, inference is done using the expectation maximization (EM) algorithm over graphone sequences:</p>
-						<img src="images/g2peq.png"></img>
-						<p>where q<sub>1</sub><sup>K</sup> is the first graphone, and K is the length of the graphone sequence.</p>
-					</section>
-					<section>
-						<h2>Results &ndash; Vietnamese (English)</h2>
-						<img src="images/G2PViet.png"></img>
-					</section>
-					<section>
-						<h2>Results &ndash; Hindi</h2>
-						<img src="images/G2PHindi.png"></img>
-					</section>
-					<section>
-						<h2>Results &ndash; Vietnamese (English) / Hindi</h2>
-						<p class="fragment">For both Vietnamese and Hindi, the error rates for the k-grams stabilize after k=4, indicating that 4 seems to give enough context for optimal graphone prediction.</p>
-						<p class="fragment">Hindi does much better (as in the case of Decision Tree Clustering). This could be as it is an easier task, with no tone complications, and a fairly regular grapheme to phoneme unit mapping.</p>
-					</section>
-					<section>
-						<h2>Results &ndash; Cantonese (Mandarin)</h2>
-						<img src="images/P2PCanto.png"></img>
-					</section>
-					<section>
-						<h2>Results &ndash; Cantonese (Mandarin) No Tones</h2>
-						<img src="images/P2PCantoNoTone.png"></img>
-					</section>
-					<section>
-						<h2>Results &ndash; Cantonese (Mandarin)</h2>
-						<img src="images/CantoToneHmap.png"></img>
-						<p class="fragment">Tone pairs (2,4) and (3,6) are most likely to be confused.</p>
-					</section>
-					<section>
-						<h2>Results &ndash; Cantonese (Mandarin)</h2>
-						<img src="images/CantoPhoneHmap.png"></img>
-					</section>
-					<section>
-						<h2>Results &ndash; Cantonese (Mandarin)</h2>
-						<p class="fragment">In this P2P experiment, tone removal gives no significant advantage (error rates remain stable).</p>
-						<p class="fragment">Apart from errors due to insufficient data (for some phones), most phones show a low substition error rate.</p>
-						<p class="fragment">Most insertion / deletion errors (largest proportion of errors), occur for phones <i>k</i>, <i>p</i>, and <i>t</i>.</p>
-					</section>
-
+					<ul>
+						<li class="fragment">In Schlippe et al (2013): Web-based tools (Wiktionary and GlobalPhone), were leveraged to automatically create pronounciation dictionaries (using Sequitur, and showed that about 15k phone tokens were sufficient to train stable grapheme-to-phoneme
+							models in 10 languages. Best word error rates of 20.97% were achieved for English.</li>
+						<li class="fragment">In Veiga et al, a pronunciation dictionary for European Portuguese was created using a joint sequence g2p model. For grapheme to phoneme alignment, the 1-01 alignment was used, which allows cases where more than one grapheme originates a phoneme
+							(deletion of phonemes). Training the dictionary on a pronunciation dictionary of 40k words yielded a word error rate of 2.44% and phoneme error rate of 0.32%. </li>
+					</ul>
 				</section>
+			</section>
 
+			<section>
 				<section>
-					<section>
-						<h2>Future Work</h2>
-					</section>
-					<section>
-						<h2>Alignment</h2>
-						<p>Implementing better schemes to align grapheme units to phonemes (01 or m-to-n) is likely to lead to much better decision tree clustering performance (making relevant feature extraction more accurate).</p>
-					</section>
-					<section>
-						<h2>Feature Set Expansion</h2>
-						<p>For decision tree clustering, the feature set needs to be expanded to include morphological and etymological features, which are likely to lead to better performance.</p>
-					</section>
-					<section>
-						<h2>Using Historical Links</h2>
-						<p>For the P2P experiments (for Cantonese&ndash;Mandarin), historical links could be leveraged to analyze and find confusable mappings between the phonemes, and this knowledge could be used to encode more meaningful features when a decision tree approach is attempted for this problem.</p>
-					</section>
+					<h2>Decision Tree Clustering</h2>
 				</section>
-				
-				<section style="text-align: left;" data-transition="slide" data-background="#b5533c">
-					<h1>Thank You</h1>
+				<section>
+					<h2>Training</h2>
+					<p>Training was done using local context of graphemes as features, and the information gain criterion.</p>
+					<p>The guessed classes were phonemes.</p>
+					<p>The J48 tree (weka implementation of the C4.5 extension of ID3), was used.</p>
+					<img src="images/IGTree.png"></img>
+				</section>
+				<section>
+					<h2>Results &ndash; Vietnamese (English)</h2>
+					<img src="images/WEKAViet.png"></img>
+				</section>
+				<section>
+					<h2>Results &ndash; Vietnamese (English)</h2>
+					<ul>
+						<li>This experiment only used the local context of the graphemes (immediate neighbours, start / end tokens), and performance is likely to improve with morphological features and better alignment.</li>
+						<li>Error rate shown is word error rate.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Results &ndash; Hindi</h2>
+					<img src="images/WEKAHindi.png"></img>
+				</section>
+				<section>
+					<h2>Results &ndash; Hindi</h2>
+					<ul>
+						<li>Alignment was fairly regular in this case, and some grapheme modifiers which don't contribute to phonemes were encoded as features of the base grapheme.</li>
+						<li>Features included local context and 4 base grapheme modifiers.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Results &ndash; Hindi</h2>
+					<img src="images/TreeHindi.png"></img>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Grapheme-To-Phoneme (G2P)</h2>
+				</section>
+				<section>
+					<h2>Introduction</h2>
+					<p>Key Insight: The fundamental idea is that a relation of input and output sequences can be generated from a common sequence of joint units (called graphones) that carry both input and output symbols.
+						<br/>The process of creating graphones from input and output symbols is called alignment or segmentation</p>
+				</section>
+				<section>
+					<h2>Introduction</h2>
+					<p>After segmentation, inference is done using the expectation maximization (EM) algorithm over graphone sequences:</p>
+					<img src="images/g2peq.png"></img>
+					<p>where q
+						<sub>1</sub>
+						<sup>K</sup> is the first graphone, and K is the length of the graphone sequence.</p>
+				</section>
+				<section>
+					<h2>Results &ndash; Vietnamese (English)</h2>
+					<img src="images/G2PViet.png"></img>
+				</section>
+				<section>
+					<h2>Results &ndash; Hindi</h2>
+					<img src="images/G2PHindi.png"></img>
+				</section>
+				<section>
+					<h2>Results &ndash; Vietnamese (English) / Hindi</h2>
+					<p class="fragment">For both Vietnamese and Hindi, the error rates for the k-grams stabilize after k=4, indicating that 4 seems to give enough context for optimal graphone prediction.</p>
+					<p class="fragment">Hindi does much better (as in the case of Decision Tree Clustering). This could be as it is an easier task, with no tone complications, and a fairly regular grapheme to phoneme unit mapping.</p>
+				</section>
+				<section>
+					<h2>Results &ndash; Cantonese (Mandarin)</h2>
+					<img src="images/P2PCanto.png"></img>
+				</section>
+				<section>
+					<h2>Results &ndash; Cantonese (Mandarin) No Tones</h2>
+					<img src="images/P2PCantoNoTone.png"></img>
+				</section>
+				<section>
+					<h2>Results &ndash; Cantonese (Mandarin)</h2>
+					<img src="images/CantoToneHmap.png"></img>
+					<p class="fragment">Tone pairs (2,4) and (3,6) are most likely to be confused.</p>
+				</section>
+				<section>
+					<h2>Results &ndash; Cantonese (Mandarin)</h2>
+					<img src="images/CantoPhoneHmap.png"></img>
+				</section>
+				<section>
+					<h2>Results &ndash; Cantonese (Mandarin)</h2>
+					<p class="fragment">In this P2P experiment, tone removal gives no significant advantage (error rates remain stable).</p>
+					<p class="fragment">Apart from errors due to insufficient data (for some phones), most phones show a low substition error rate.</p>
+					<p class="fragment">Most insertion / deletion errors (largest proportion of errors), occur for phones
+						<i>k</i>,
+						<i>p</i>, and
+						<i>t</i>.</p>
 				</section>
 
-<!--
+			</section>
+
+			<section>
+				<section>
+					<h2>Future Work</h2>
+				</section>
+				<section>
+					<h2>Alignment</h2>
+					<p>Implementing better schemes to align grapheme units to phonemes (01 or m-to-n) is likely to lead to much better decision tree clustering performance (making relevant feature extraction more accurate).</p>
+				</section>
+				<section>
+					<h2>Feature Set Expansion</h2>
+					<p>For decision tree clustering, the feature set needs to be expanded to include morphological and etymological features, which are likely to lead to better performance.</p>
+				</section>
+				<section>
+					<h2>Using Historical Links</h2>
+					<p>For the P2P experiments (for Cantonese&ndash;Mandarin), historical links could be leveraged to analyze and find confusable mappings between the phonemes, and this knowledge could be used to encode more meaningful features when a decision tree approach
+						is attempted for this problem.</p>
+				</section>
+			</section>
+
+			<section style="text-align: left;" data-transition="slide" data-background="#b5533c">
+				<h1>Thank You</h1>
+			</section>
+
+			<!--
 
 				<section>
 					<h2>Point of View</h2>
@@ -492,37 +505,56 @@ Reveal.addEventListener( 'customevent', function() {
 				</section>
 				-->
 
-			</div>
-
 		</div>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.js"></script>
+	</div>
 
-		<script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.js"></script>
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/zoom-js/zoom.js', async: true },
-					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/notes/notes.js', async: true }
-				]
-			});
+			// Optional reveal.js plugins
+			dependencies: [{
+				src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/classList.js',
+				condition: function() {
+					return !document.body.classList;
+				}
+			}, {
+				src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/marked.js',
+				condition: function() {
+					return !!document.querySelector('[data-markdown]');
+				}
+			}, {
+				src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/markdown.js',
+				condition: function() {
+					return !!document.querySelector('[data-markdown]');
+				}
+			}, {
+				src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/highlight/highlight.js',
+				async: true,
+				callback: function() {
+					hljs.initHighlightingOnLoad();
+				}
+			}, {
+				src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/zoom-js/zoom.js',
+				async: true
+			}, {
+				src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/notes/notes.js',
+				async: true
+			}]
+		});
+	</script>
 
-		</script>
+</body>
 
-	</body>
 </html>
