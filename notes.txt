@@ -1,0 +1,27 @@
+- Failure to follow NASA guidelines
+- organizational culture and decision making
+- NASA managers knew Thiokol's O-Ring design had flaws in '77
+- Failed to heed engineer warnings for low temp ('go fever')
+- Failed to report concerns to superiors
+- Thiokol: Not tested for low temp
+- McDonnell Dougles report '71 - listed safety records of solid rockets (stated burnthrough of gases next to inflammable component would be catastrophic and lead to unabortable flight)
+- '77 test on O-Ring showed joint rotation
+- Marshall Space Flight Centre engineers wrote to George Hardy (manager of SRB) about unacceptable Thiokol design. Hardy did not forward to Thiokol, and design was approved in '80.
+- STS-2 showed erosion, but contrary to NASA regulations, Marshall Centre did not report this to senior NASA mgmt, instead opting to keep this in their channel with Thiokol.
+- Despite Criticality 1 rating, no one at Marshall suggesting grounding flight
+- Marshall and Thiokol did not call for halt even after recognizing threat, instead opting to accept this as a flight risk.
+- Lawrence Mulloy, Marshall's SRB manager since '82, issued and waived launch constraints for 6 flights.
+- Thiokol persuaded NASA to declare O-Ring problem closed.
+- Number of delays to launch
+- Jan 28 temp close to launch threshold (-1 deg. C). On Jan 27, Thiokol and NASA hold conference calls. Several engineers express concern about low temp effects on O Rings. Recommended postponement, as there was not enough data to simulate functioning in temp < 12 deg. C. As it was a Criticality 1 component, this was an important consideration.
+- Thiokol first supported its engineers concerns, but NASA staff opposed it. Hardy "appalled". Mulloy annoyed by delay.
+- NASA argument: if primary failed, sec would seal. 2 problems : 1. Unproven 2. Not a consideration for Criticality 1 component.
+- NASA did not know Thiokol's earlier cold on O Rings concern, and nor did they understand Rockwell's Ice concerns.
+- Thiokol engineers argued low overnight temp would result in SRB temps below red line (4 deg C)
+- Kennedy Ice team initially found SRB temp irregularly low, but it was put down as a erroneous reading due to incorrect use of the probe.
+- Rockwell engineers expressed Ice Concerns. Rocco Petrone (head of space transport), viewed it as a launch constraint. Cape Rockwell managers voiced the concerns in a manner that led to Houston mission manager to give a go ahead.
+- Ice team performed another check before clearance given for launch.
+- extrusion post experiment included in design specs
+- Unusual quiet from NASA after the incident
+- Feynmann accusations
+
